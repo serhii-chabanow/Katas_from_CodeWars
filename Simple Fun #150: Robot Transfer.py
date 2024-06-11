@@ -9,8 +9,12 @@ def robot_transfer(matrix, k):
     for i in range(n):
         for j in range(n):
             x, y = i, j
+            visited = []
             for _ in range(k):
                 x, y = parse_coordinates(matrix[x][y])
-            if x == i and y == j:
+                visited.append((x, y))
+            if x == i and y == j and len(set(visited)) == k:
                 count += 1
+
     return count
+
