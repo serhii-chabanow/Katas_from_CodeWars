@@ -16,4 +16,4 @@ def score(dice):
         else:
             result_points += (count // 3) * num * 100
 
-        return result_points
+    return result_points
